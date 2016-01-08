@@ -449,6 +449,16 @@ package body STM32F4.RCC is
       Register.APB1ENR := Register.APB1ENR or APB1ENR_PWREN;
    end PWR_Clock_Enable;
 
+   procedure CAN1_Clock_Enable is
+   begin
+      Register.APB1ENR := Register.APB1ENR or APB1ENR_CAN1EN;
+   end CAN1_Clock_Enable;
+
+   procedure CAN2_Clock_Enable is
+   begin
+      Register.APB1ENR := Register.APB1ENR or APB1ENR_CAN2EN;
+   end CAN2_Clock_Enable;
+
    procedure TIM2_Clock_Disable is
    begin
       Register.APB1ENR := Register.APB1ENR and not APB1ENR_TIM2EN;
@@ -563,6 +573,16 @@ package body STM32F4.RCC is
    begin
       Register.APB1ENR := Register.APB1ENR and not APB1ENR_PWREN;
    end PWR_Clock_Disable;
+
+   procedure CAN1_Clock_Disable is
+   begin
+      Register.APB1ENR := Register.APB1ENR and not APB1ENR_CAN1EN;
+   end CAN1_Clock_Disable;
+
+   procedure CAN2_Clock_Disable is
+   begin
+      Register.APB1ENR := Register.APB1ENR and not APB1ENR_CAN2EN;
+   end CAN2_Clock_Disable;
 
    procedure TIM1_Clock_Enable is
    begin
@@ -1027,6 +1047,16 @@ package body STM32F4.RCC is
       Register.APB1RSTR := Register.APB1RSTR or APB1RSTR_PWRRST;
    end PWR_Force_Reset;
 
+   procedure CAN1_Force_Reset is
+   begin
+      Register.APB1RSTR := Register.APB1RSTR or APB1RSTR_CAN1RST;
+   end CAN1_Force_Reset;
+
+   procedure CAN2_Force_Reset is
+   begin
+      Register.APB1RSTR := Register.APB1RSTR or APB1RSTR_CAN2RST;
+   end CAN2_Force_Reset;
+
    procedure APB1_Release_Reset is
    begin
       Register.APB1RSTR := 0;
@@ -1146,6 +1176,16 @@ package body STM32F4.RCC is
    begin
       Register.APB1RSTR := Register.APB1RSTR and not APB1RSTR_PWRRST;
    end PWR_Release_Reset;
+
+   procedure CAN1_Release_Reset is
+   begin
+      Register.APB1RSTR := Register.APB1RSTR and not APB1RSTR_CAN1RST;
+   end CAN1_Release_Reset;
+
+   procedure CAN2_Release_Reset is
+   begin
+      Register.APB1RSTR := Register.APB1RSTR and not APB1RSTR_CAN2RST;
+   end CAN2_Release_Reset;
 
    procedure APB2_Force_Reset is
    begin

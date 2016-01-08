@@ -126,6 +126,9 @@ package STM32F4.RCC is
    procedure I2C3_Clock_Enable with Inline;
    procedure PWR_Clock_Enable with Inline;
 
+   procedure CAN1_Clock_Enable with Inline;
+   procedure CAN2_Clock_Enable with Inline;
+
    procedure TIM2_Clock_Disable with Inline;
    procedure TIM3_Clock_Disable with Inline;
    procedure TIM4_Clock_Disable with Inline;
@@ -149,6 +152,9 @@ package STM32F4.RCC is
    procedure I2C2_Clock_Disable with Inline;
    procedure I2C3_Clock_Disable with Inline;
    procedure PWR_Clock_Disable with Inline;
+
+   procedure CAN1_Clock_Disable with Inline;
+   procedure CAN2_Clock_Disable with Inline;
 
    procedure TIM1_Clock_Enable with Inline;
    procedure TIM8_Clock_Enable with Inline;
@@ -250,6 +256,9 @@ package STM32F4.RCC is
    procedure I2C3_Force_Reset with Inline;
    procedure PWR_Force_Reset with Inline;
 
+   procedure CAN1_Force_Reset with Inline;
+   procedure CAN2_Force_Reset with Inline;
+
    procedure APB1_Release_Reset with Inline;
    procedure TIM2_Release_Reset with Inline;
    procedure TIM3_Release_Reset with Inline;
@@ -274,6 +283,9 @@ package STM32F4.RCC is
    procedure I2C2_Release_Reset with Inline;
    procedure I2C3_Release_Reset with Inline;
    procedure PWR_Release_Reset with Inline;
+
+   procedure CAN1_Release_Reset with Inline;
+   procedure CAN2_Release_Reset with Inline;
 
 
    procedure APB2_Force_Reset with Inline;
